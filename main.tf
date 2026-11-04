@@ -28,3 +28,9 @@ resource "aws_internet_gateway" "lab" {
 resource "aws_route_table" "lab" {
   vpc_id = aws_vpc.lab.id
 }
+# creating aws ec2
+
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
