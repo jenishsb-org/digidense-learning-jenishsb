@@ -23,3 +23,8 @@ resource "aws_security_group" "lab" {
 resource "aws_internet_gateway" "lab" {
   vpc_id = aws_vpc.lab.id
 }
+# creating aws_route_table
+
+resource "aws_route_table" "lab" {
+  vpc_id = aws_vpc.lab.id
+}
