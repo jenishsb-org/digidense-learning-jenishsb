@@ -43,3 +43,9 @@ resource "aws_route_table" "lab" {
     Name = "corrected-route"
   }
 }
+#creating aws ec2
+
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
