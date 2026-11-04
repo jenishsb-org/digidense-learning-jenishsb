@@ -18,4 +18,19 @@ resource "aws_security_group" "lab" {
   name   = "lab-sg"
   vpc_id = aws_vpc.lab.id
 }
-# Test protected main
+# creating aws_internet_gateway
+
+resource "aws_internet_gateway" "lab" {
+  vpc_id = aws_vpc.lab.id
+}
+# creating aws_route_table
+
+resource "aws_route_table" "lab" {
+  vpc_id = aws_vpc.lab.id
+}
+# creating aws ec2
+
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
