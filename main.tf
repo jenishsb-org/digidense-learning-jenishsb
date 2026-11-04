@@ -34,3 +34,4 @@ resource "aws_instance" "lab" {
   ami           = "ami-dummy"
   instance_type = "t2.micro"
 }
+# Test protected main
