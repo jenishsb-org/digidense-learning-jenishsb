@@ -1,5 +1,3 @@
-resource "null_resource" "example" {
-provisioner "local-exec" {
-command = "echo Hello from Terraform"
-	}
+resource "aws_instance" "example" {
+  instance_type = "t3.micro"
 }
