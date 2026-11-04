@@ -34,3 +34,12 @@ resource "aws_instance" "lab" {
   ami           = "ami-dummy"
   instance_type = "t2.micro"
 }
+# creating aws_route_table
+
+resource "aws_route_table" "lab" {
+  vpc_id = aws_vpc.lab.id
+
+  tags = {
+    Name = "corrected-route"
+  }
+}
