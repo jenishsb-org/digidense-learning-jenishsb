@@ -68,10 +68,3 @@ resource "aws_s3_bucket_public_access_block" "lab" {
 resource "aws_s3_bucket_lifecycle_configuration" "lab" {
   bucket = aws_s3_bucket.lab.id
 }
-# creating kms_key
-
-resource "aws_kms_key" "example" {
-  description             = "KMS key for encryption"
-  deletion_window_in_days = 7
-  enable_key_rotation     = true
-}
