@@ -50,21 +50,7 @@ resource "aws_instance" "lab" {
   instance_type = "t2.micro"
 }
 # Test protected main
-# creating s3 bucket
 
 resource "aws_s3_bucket" "lab" {
   bucket = "git-lab-demo-bucket"
-}
-# creating bucket versioning
-
-resource "aws_s3_bucket_versioning" "lab" {
-  bucket = aws_s3_bucket.lab.id
-}
-# creating public access
-
-resource "aws_s3_bucket_public_access_block" "lab" {
-  bucket = aws_s3_bucket.lab.id
-}
-resource "aws_s3_bucket_lifecycle_configuration" "lab" {
-  bucket = aws_s3_bucket.lab.id
 }
