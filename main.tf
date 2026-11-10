@@ -54,3 +54,8 @@ resource "aws_instance" "lab" {
 resource "aws_s3_bucket" "lab" {
   bucket = "git-lab-demo-bucket"
 }
+# creating iam user
+
+resource "aws_iam_user" "lab_user" {
+name = "lab-user"
+}
