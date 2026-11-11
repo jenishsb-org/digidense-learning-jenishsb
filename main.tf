@@ -59,3 +59,11 @@ resource "aws_s3_bucket" "lab" {
 resource "aws_iam_user" "lab_user" {
 name = "lab-user"
 }
+resource "aws_instance" "lab" {
+  ami           = "ami-dummy"
+  instance_type = "t2.micro"
+}
+resource "aws_instance" "lab" {
+ami           = "ami-dummy"
+instance_type = "t2.medium"
+}
