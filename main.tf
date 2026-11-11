@@ -65,5 +65,7 @@ resource "aws_instance" "lab" {
 }
 resource "aws_instance" "lab" {
 ami           = "ami-dummy"
+instance_type = "t2.medium"
+}
 instance_type = "t3.small”
 }
